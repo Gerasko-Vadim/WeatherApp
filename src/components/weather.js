@@ -93,7 +93,6 @@ const Weather = (props) => {
   const temp1 = String(temp).slice(0, 2);
   const feels = props.data.feels_like;
   const feels1 = String(feels).slice(0, 2);
-  let icon = String(props.data.icon);
 
   return (
     <div className={'content ' + classNames}>
