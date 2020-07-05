@@ -14,10 +14,8 @@ const Weather = (props) => {
   const [weather, setWeather] = useState(sun);
   console.log(props);
   // Аналогично componentDidMount и componentDidUpdate:
-  let classNames=props.btn ? 'visability' : 'vasabilyty-none';
+  let classNames = props.btn ? "visability" : "vasabilyty-none";
   useEffect(() => {
-
-
     switch (props.data.icon) {
       case "Clear":
         setWeather(sun);
@@ -49,7 +47,7 @@ const Weather = (props) => {
         setWeather(sun);
         break;
     }
-  },[props.data.icon]);
+  }, []);
 
   function dateBuilder(d) {
     let months = [
@@ -98,7 +96,7 @@ const Weather = (props) => {
   const feels1 = String(feels).slice(0, 2);
 
   return (
-    <div className={'content ' + classNames}>
+    <div className={"content " + classNames}>
       <div className="city">
         <span className="city1">{props.data.city}</span>
         <div className="time">
@@ -135,11 +133,15 @@ const Weather = (props) => {
       <div className="suntime">
         <div className="block-sun">
           <span>Sunrise</span>
-          <span>{new Date(props.data.sunrise * 1000).toLocaleTimeString("ru-Ru")}</span>
+          <span>
+            {new Date(props.data.sunrise * 1000).toLocaleTimeString("ru-Ru")}
+          </span>
         </div>
         <div className="block-sun">
           <span>Sunset</span>
-          <span>{new Date(props.data.sunset * 1000).toLocaleTimeString("ru-Ru")}</span>
+          <span>
+            {new Date(props.data.sunset * 1000).toLocaleTimeString("ru-Ru")}
+          </span>
         </div>
       </div>
     </div>
