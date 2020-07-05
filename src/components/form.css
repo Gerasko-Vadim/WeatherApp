@@ -1,0 +1,56 @@
+.form {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.input {
+  width: 70%;
+  height: 100%;
+  border-radius: 7px;
+  border: 1px solid #ffffff;
+  padding-left: 10px;
+}
+.input:hover {
+  outline-width: 2px;
+  outline-color: rgb(1, 159, 198);
+  outline-offset: 1px;
+  outline-style: solid;
+  -moz-outline-radius: 7px;
+  transition: 0.2s ease-in-out;
+}
+.input:focus {
+  outline-width: 2px;
+  outline-color: rgb(1, 159, 198);
+  outline-offset: 1px;
+  outline-style: solid;
+  -moz-outline-radius: 7px;
+  transition: 0.2s ease-in-out;
+}
+.btn {
+  height: 100%;
+  width: 25%;
+  border-radius: 5px;
+  background: rgb(1, 159, 198);
+  border: 1px solid rgb(1, 159, 198);
+  color: azure;
+}
+.btn:hover {
+  outline-width: 2px;
+  outline-color: rgb(1, 159, 198);
+  outline-offset: 1px;
+  outline-style: solid;
+  -moz-outline-radius: 7px;
+  transition: 0.2s ease-in-out;
+  background: azure;
+  color: black;
+}
+.btn:focus {
+  outline-width: 2px;
+  outline-color: rgb(1, 159, 198);
+  outline-offset: 1px;
+  outline-style: solid;
+  -moz-outline-radius: 7px;
+  transition: 0.2s ease-in-out;
+}

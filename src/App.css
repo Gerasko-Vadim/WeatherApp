@@ -1,0 +1,22 @@
+.container{
+  width: 30%;
+  height: 80%;
+  margin-top: 20px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+body{
+  background-image: url(./img/default.jpg);
+  background-repeat: no-repeat;
+  color: beige;
+  background-size: cover;
+  margin: 0;
+}
+@media screen and (max-device-width: 500px) {
+  .container {
+    width: 100%;
+    padding: 5px  5px 5px 5px;
+    padding-right: 5px;
+  }
+}

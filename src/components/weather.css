@@ -1,0 +1,79 @@
+.content{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.342);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.city{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time{
+    margin-top: 10px;
+}
+.city1{
+    font-size: 40px;
+}
+.temp{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.temp1{
+    font-size: 50px;
+}
+.data{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.grad, .winds, .humidety{
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.img{
+    width: 40px;
+}
+.text{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.suntime{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.block-sun{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.visability{
+    visibility: visible;
+}
+.vasabilyty-none{
+    visibility: hidden;
+}
