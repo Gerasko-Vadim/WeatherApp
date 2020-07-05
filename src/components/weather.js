@@ -47,7 +47,7 @@ const Weather = (props) => {
         setWeather(sun);
         break;
     }
-  }, []);
+  }, [weather]);
 
   function dateBuilder(d) {
     let months = [
