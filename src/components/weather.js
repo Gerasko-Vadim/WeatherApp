@@ -45,8 +45,11 @@ const Weather = (props) => {
       case "Dust":
         setWeather(chast_obl);
         break;
+      default:
+        setWeather(sun);
+        break;
     }
-  });
+  },[props.data.icon]);
 
   function dateBuilder(d) {
     let months = [

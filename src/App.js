@@ -23,7 +23,7 @@ const App = () => {
 
   const getWeather = (e) => {
     e.preventDefault();
-    if(e.target.elements.city.value == ''){
+    if(e.target.elements.city.value === ''){
       alert("Enter the name of the city !! Do not do like this :)")
     }
     else{
@@ -56,9 +56,7 @@ const App = () => {
       
     }
   };
-  const onClickBtn=()=>{
-    setBtn(true);
-  }
+
 
   return (
     <div className="container">
