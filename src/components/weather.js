@@ -106,7 +106,7 @@ const Weather = (props) => {
       </div>
       <hr />
       <div className="temp">
-        <img src={weather} />
+        <img alt="" src={weather} />
         <span className="temp1">{temp1} &#8451;</span>
       </div>
       <hr />
@@ -117,15 +117,15 @@ const Weather = (props) => {
       </div>
       <div className="data">
         <div className="grad">
-          <img className="img" src={termo} />
+          <img alt="" className="img" src={termo} />
           <span>{feels1} &#8451;</span>
         </div>
         <div className="winds">
-          <img className="img" src={win} />
+          <img alt="" className="img" src={win} />
           <span>{props.data.speed} m/s</span>
         </div>
         <div className="humidety">
-          <img className="img" src={kapli} />
+          <img alt="" className="img" src={kapli} />
           <span>{props.data.humidity} %</span>
         </div>
       </div>
