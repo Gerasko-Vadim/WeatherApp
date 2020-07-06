@@ -32,7 +32,7 @@ const App = () => {
       const city = e.target.elements.city.value;
       axios
         .get(
-          `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`
         )
         .then((res) => {
           const weather = res.data;
