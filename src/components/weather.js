@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./weather.css";
 
 import kapli from "../img/drops.png";
@@ -6,10 +6,18 @@ import termo from "../img/thermometer.png";
 import win from "../img/wind.png";
 
 const Weather = (props) => {
-
+const [clas,setClas]=useState("vasabilyty-none");
+    useEffect(()=>{
+        if(props.data.temp=== undefined){
+            console.log("Erorr")
+            setClas("vasabilyty-none");
+        }
+        else{
+            setClas("vasabilyty");        }
+    });
   console.log(props);
   // Аналогично componentDidMount и componentDidUpdate:
-  let classNames = props.btn ? "visability" : "vasabilyty-none";
+
 
   function dateBuilder(d) {
     let months = [
@@ -58,7 +66,7 @@ const Weather = (props) => {
   const feels1 = String(feels).slice(0, 2);
 
   return (
-    <div className={"content " + classNames}>
+    <div className={"content " + clas}>
       <div className="city">
         <span className="city1">{props.data.city}</span>
         <div className="time">

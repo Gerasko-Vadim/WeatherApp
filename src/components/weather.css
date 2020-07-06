@@ -72,8 +72,8 @@
     align-items: center;
 }
 .visability{
-    visibility: visible;
+    display: block;
 }
 .vasabilyty-none{
-    visibility: hidden;
+    display: none;
 }

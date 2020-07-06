@@ -23,7 +23,7 @@ const App = () => {
 
 
 
-  const getWeather = (e) => {
+  const  getWeather  = (e) => {
     e.preventDefault();
     if (e.target.elements.city.value === "") {
       alert("Enter the name of the city !! Do not do like this :)");
