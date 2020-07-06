@@ -7,7 +7,7 @@ import Text from "./components/text.js"
 
 const App = () => {
   const API_KEY = "07d763ecea573a9ac7585df0c586e84c";
-
+  const units='metric';
   const [data, setData] = useState({
     temp: undefined,
     city: undefined,
@@ -32,7 +32,7 @@ const App = () => {
     const city = e.target.elements.city.value;
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`
       )
       .then((res) => {
         const weather = res.data;
@@ -43,7 +43,7 @@ const App = () => {
           country: weather.sys.country,
           sunrise: weather.sys.sunrise,
           sunset: weather.sys.sunset,
-          icon: weather.weather[0].main,
+          icon: weather.weather[0].icon,
           feels_like: weather.main.feels_like,
           speed: weather.wind.speed,
           humidity: weather.main.humidity,

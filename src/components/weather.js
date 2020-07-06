@@ -15,39 +15,7 @@ const Weather = (props) => {
   console.log(props);
   // Аналогично componentDidMount и componentDidUpdate:
   let classNames = props.btn ? "visability" : "vasabilyty-none";
-  useEffect(() => {
-    switch (props.data.icon) {
-      case "Clear":
-        setWeather(sun);
-        break;
-      case "Rain":
-        setWeather(rain);
-        break;
 
-      case "Clouds":
-        setWeather(obl);
-        break;
-
-      case "Snow":
-        setWeather(snow);
-        break;
-
-      case "Mist":
-        setWeather(chast_obl);
-        break;
-
-      case "Thunderstorm":
-        setWeather(lightning);
-        break;
-
-      case "Dust":
-        setWeather(chast_obl);
-        break;
-      default:
-        setWeather(sun);
-        break;
-    }
-  },[props.data.icon]);
   function dateBuilder(d) {
     let months = [
       "January",
@@ -90,7 +58,7 @@ const Weather = (props) => {
     .toString()
     .padStart(2, "0")} (Local)`;
   const temp = props.data.temp;
-  const temp1 = String(temp).slice(0, 2);
+  const temp1 = Math.floor(temp)
   const feels = props.data.feels_like;
   const feels1 = String(feels).slice(0, 2);
 
@@ -105,7 +73,7 @@ const Weather = (props) => {
       </div>
       <hr />
       <div className="temp">
-        <img alt="" src={weather} />
+        <img alt="" src={'http://openweathermap.org/img/wn/' + props.data.icon + '@2x.png'} />
         <span className="temp1">{temp1} &#8451;</span>
       </div>
       <hr />
