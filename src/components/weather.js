@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./weather.css";
-import sun from "../img/icons8-sun-96.png";
-import obl from "../img/icons8-облака-96.png";
-import chast_obl from "../img/icons8-частичная-облачность-96.png";
-import lightning from "../img/icons8-молния-из-облаков-96.png";
-import snow from "../img/icons8-небольшой-снег-96.png";
-import rain from "../img/icons8-сильный-дождь-96.png";
+
 import kapli from "../img/drops.png";
 import termo from "../img/thermometer.png";
 import win from "../img/wind.png";
 
 const Weather = (props) => {
-  const [weather, setWeather] = useState(sun);
+
   console.log(props);
   // Аналогично componentDidMount и componentDidUpdate:
   let classNames = props.btn ? "visability" : "vasabilyty-none";
