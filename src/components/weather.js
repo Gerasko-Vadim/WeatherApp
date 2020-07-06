@@ -14,7 +14,7 @@ const [clas,setClas]=useState("vasabilyty-none");
         }
         else{
             setClas("vasabilyty");        }
-    });
+    },[props.data.temp]);
   console.log(props);
   // Аналогично componentDidMount и componentDidUpdate:
 
